@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block title %}Article List{% endblock title %}
+{% block content %}
+    {% for article in articles %}
+        <a href="{% url 'article_detail' pk=article.pk %}">{{ article.title }}</a>
+        {{ article.author }}
+        <img src="{{ article.image.url }}" alt=""{{ article.title }}>
+        <hr><br>
+    {% endfor %}
+{% endblock content %}
