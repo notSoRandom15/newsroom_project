@@ -22,15 +22,16 @@
   
   
           &nbsp;     &nbsp;     &nbsp; 
+
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'home' %}">Homepage &nbsp; <i class="fa fa-home" aria-hidden="true"></i> </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'category' %}">categories &nbsp; <i class="fa fa-home" aria-hidden="true"></i> </a>
+          </li>
   
           {% if user.is_authenticated %}
-  
-            {% comment %} <li class="nav-item">
-        
-              <a class="nav-link" href="{% url 'articles' %}">articles &nbsp; <i class="fa fa-home" aria-hidden="true"></i> </a>
-  
-            </li>
-   {% endcomment %}
   
             &nbsp;     &nbsp;     &nbsp; 
             
