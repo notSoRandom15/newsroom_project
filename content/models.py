@@ -27,7 +27,7 @@ class Articles(models.Model):
     author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
     tags = models.ManyToManyField(Tags)
-    image = models.ImageField(upload_to='images/')
+    image = models.ImageField(upload_to='images/', blank=True, null=True)
     publishing = models.BooleanField(default=False)
 
     def __str__(self):

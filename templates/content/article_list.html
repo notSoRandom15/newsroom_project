@@ -2,10 +2,17 @@
 
 {% block title %}Article List{% endblock title %}
 {% block content %}
+
+<a href="{% url "article_form" %}"><button>Add Article</button></a>
+
     {% for article in articles %}
         <a href="{% url 'article_detail' pk=article.pk %}">{{ article.title }}</a>
         {{ article.author }}
+        {% if article.image %}
         <img src="{{ article.image.url }}" alt=""{{ article.title }}>
-        <hr><br>
+        {% else %}
+        <br>
+        {% endif %}
+        <hr>
     {% endfor %}
 {% endblock content %}
