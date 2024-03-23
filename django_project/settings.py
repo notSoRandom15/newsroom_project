@@ -43,9 +43,11 @@ INSTALLED_APPS = [
     "crispy_forms",
     "crispy_bootstrap5",
     'ckeditor',
+    'adminsortable2',
     #apps
     'accounts',
     'content',
+    'modules',
 ] 
 
 MIDDLEWARE = [
